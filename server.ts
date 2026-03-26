@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import { createServer as createViteServer } from "vite";
 import { Server } from "socket.io";
 import http from "http";
@@ -7,6 +8,7 @@ import crypto from "crypto";
 
 async function startServer() {
   const app = express();
+  app.use(cors());
   const server = http.createServer(app);
   const io = new Server(server, {
     cors: { origin: "*" },
