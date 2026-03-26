@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { io, Socket } from 'socket.io-client';
 import { Copy, Users, ArrowRight, Send, Share2, MessageCircle, Play, Check, X, Trophy, MessageSquare } from 'lucide-react';
 
-const socket: Socket = io();
+const socket: Socket = io('https://football-chat--fdgfdg0100.replit.app');
 
 type Message = { id: string; senderId: string; senderName: string; text: string; timestamp: number };
 type Player = { id: string; name: string; score: number; connected?: boolean };
